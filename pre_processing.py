@@ -44,4 +44,4 @@ def data_process():
                                         result_b=text_b[text_b_num].replace('\t'," ")
                                         out.write("full"+'\t'+result_b+'\n')
 
-#data_process()
+data_process()
