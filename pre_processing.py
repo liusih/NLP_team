@@ -3,7 +3,7 @@ import json
 import os
 
 def data_process():
-    path = "/home1/lsh2018/classification/new_lsh/data" #文件夹目录
+    path = "/home/isliusihong/NLP_team/WikiJoin/data" #文件夹目录
     files= os.listdir(path) #得到文件夹下的所有文件名称
     s = []
     i=0
@@ -30,7 +30,7 @@ def data_process():
                     text_b_list = load_dict[para_num]["full"]["sectionContents"]
                     
                     for list_num_b in range(len(text_b_list)):
-                        if text_b_list[list_num_b]["isContentSection"] == True or text_a_list[list_num_b]["title"] == "References":
+                        if text_b_list[list_num_b]["isContentSection"] == True or text_b_list[list_num_b]["title"] == "References":
 
                             text_b = text_b_list[list_num_b]["text"]
                             if text_b:
@@ -40,7 +40,5 @@ def data_process():
         i=i+1
         if i>=5:
             break
-
-    #print(s) #打印结果
 
 data_process()
