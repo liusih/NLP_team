@@ -14,7 +14,7 @@ def extract_list(section_contents):
             if text_a:  # ["text"]: not empty
                 text_a = text_a.split('\n')  # split text_a with '\n' into para
                 for text_a_num in range(len(text_a)):
-                    if 60 <= len(text_a[text_a_num]) <= 128:
+                    if 80 <= len(text_a[text_a_num].split()) <= 128:
                         result_a = text_a[text_a_num].replace('\t', " ")
                         yield result_a
 
