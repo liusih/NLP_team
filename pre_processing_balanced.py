@@ -31,7 +31,7 @@ def data_process():
     files = os.listdir(path)  # 得到文件夹下的所有文件名称
     list_class = []
     str = ''
-    out = open("all_data_cut.tsv", 'a+')
+    out = open("all_data_cut_80_balanced.tsv", 'a+')
     number_map = collections.defaultdict(list)
     all_simple = []
     total_full = 0
